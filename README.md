@@ -1,74 +1,42 @@
-# React + TypeScript + Vite
+# Hola, soy Diego 👋
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Soy **Frontend Developer** con más de 3 años de experiencia como Desarrollador FrontEnd con React Js. Participé en el desarrollo de diferentes aplicaciones web interactivas y dinámicas como FrontEnd,  principalmente con el uso de tecnologías  HTML, CSS, Bootstrap, Material UI, 
+Tailwind, Git, Github, Javascript, Typescript, React Js y su ecosistema. Colaborando en decisiones técnicas, análisis y estimaciones 
+en metodologías ágiles. 
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Sobre mí
 
-## React Compiler
+- Apasionado por el desarrollo web, y el diseño de sistemas
+- Experiencia trabajando con equipos remotos en metodologías ágiles
+- Interesado en UX/UI y en la intersección entre código y diseño
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
+## Stack principal
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+**Frontend**
+`HTML` `CSS` `React` `Javascript` `TypeScript`  `Tailwind CSS` `Bootstrap` `Material UI`
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+**Diseño**
+`Figma`
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+**Herramientas**
+`Git` `Github` `Visual Studio Code`
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+**Inteligencia Artificial**
+`Claude Code` `Claude Design` `Github Copilot` `Antigravity` `OpenCode`
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+---
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## Proyectos destacados
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
-# portfolio
+| Proyecto | Stack | Descripción |
+|----------|-------|-------------|
+| Invoice App | React Js · TypeScript · TanStack Query · Supabase · PostgreSQL | Plataforma full-stack para gestionar clientes y seguimiento de facturas |
+| IP Address Tracker | React · Axios · TanStack Query · React Leaflet · Reactstrap | Tracker y visualizador de direcciones IP en mapas de Leaflet |
+
+---
+
+_Construido con React 19 + TypeScript + Vite_
