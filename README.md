@@ -1,6 +1,6 @@
 # Hola, soy Diego 👋
 
-Soy **Frontend Developer** con más de 3 años de experiencia como Desarrollador FrontEnd con React Js. Participé en el desarrollo de diferentes aplicaciones web interactivas y dinámicas como FrontEnd,  principalmente con el uso de tecnologías  HTML, CSS, Bootstrap, Material UI, 
+Soy **Frontend Developer** con más de 3 años de experiencia con React Js. Participé en el desarrollo de diferentes aplicaciones web interactivas y dinámicas como FrontEnd,  principalmente con el uso de tecnologías  HTML, CSS, Bootstrap, Material UI, 
 Tailwind, Git, Github, Javascript, Typescript, React Js y su ecosistema. Colaborando en decisiones técnicas, análisis y estimaciones 
 en metodologías ágiles. 
 
