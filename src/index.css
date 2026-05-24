@@ -5,29 +5,42 @@
 }
 
 :root {
-  --bg: #07090f;
-  --bg-alt: #0b0e1a;
-  --surface: rgba(255, 255, 255, 0.03);
-  --surface-hover: rgba(255, 255, 255, 0.06);
-  --border: rgba(255, 255, 255, 0.07);
-  --border-accent: rgba(0, 212, 255, 0.25);
+  /* ── Palette ──────────────────────────────────────── */
+  --charcoal: #1a2030;   /* darkest — main background      */
+  --dark:     #1f2d3d;   /* dark blue — alt sections       */
+  --teal:     #76ABAE;   /* soft teal — accent / pop color */
+  --light:    #EEEEEE;   /* near-white — headings & text   */
 
-  --accent: #00d4ff;
-  --accent-2: #7c3aed;
-  --accent-dim: rgba(0, 212, 255, 0.12);
-  --accent-glow: rgba(0, 212, 255, 0.06);
+  /* ── Backgrounds ──────────────────────────────────── */
+  --bg:     #1a2030;
+  --bg-alt: #1f2d3d;
 
-  --text: #8892a4;
-  --text-bright: #e2e8f0;
-  --text-dim: #4a5568;
+  /* ── Surfaces ─────────────────────────────────────── */
+  --surface:       rgba(31, 45, 61, 0.55);
+  --surface-hover: rgba(31, 45, 61, 0.85);
+
+  /* ── Borders ──────────────────────────────────────── */
+  --border:        rgba(118, 171, 174, 0.15);
+  --border-accent: rgba(118, 171, 174, 0.4);
+
+  /* ── Accent ───────────────────────────────────────── */
+  --accent:      #76ABAE;
+  --accent-2:    #EEEEEE;
+  --accent-dim:  rgba(118, 171, 174, 0.12);
+  --accent-glow: rgba(118, 171, 174, 0.06);
+
+  /* ── Text ─────────────────────────────────────────── */
+  --text:        #9abebf;
+  --text-bright: #EEEEEE;
+  --text-dim:    #5a7e80;
 
   --font: 'Inter', system-ui, sans-serif;
 
-  --radius: 14px;
+  --radius:    14px;
   --radius-sm: 8px;
   --radius-lg: 20px;
 
-  --shadow-glow: 0 0 40px rgba(0, 212, 255, 0.08);
+  --shadow-glow: 0 0 40px rgba(118, 171, 174, 0.1);
   --shadow-card: 0 4px 24px rgba(0, 0, 0, 0.4);
 
   --transition: 0.2s ease;
@@ -65,9 +78,9 @@ body {
   background: var(--bg);
 }
 ::-webkit-scrollbar-thumb {
-  background: rgba(0, 212, 255, 0.2);
+  background: rgba(118, 171, 174, 0.3);
   border-radius: 3px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: rgba(0, 212, 255, 0.4);
+  background: rgba(118, 171, 174, 0.55);
 }

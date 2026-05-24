@@ -59,9 +59,6 @@ export default function Hero() {
   return (
     <section className="hero" id="home">
       <Particles />
-      <div className="hero__glow hero__glow--1" />
-      <div className="hero__glow hero__glow--2" />
-
       <div className="hero__content">
         <h1 className="hero__title">
           Hola, soy <span className="text-accent">Diego</span>
