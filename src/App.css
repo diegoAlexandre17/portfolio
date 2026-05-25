@@ -32,7 +32,7 @@
   color: var(--text-bright);
   letter-spacing: -0.03em;
   line-height: 1.2;
-  margin-top: 16px;
+  margin: 12px 0;
 }
 
 .section-desc {
@@ -63,6 +63,7 @@
 .section-body {
   color: var(--text);
   line-height: 1.7;
+  margin-bottom: 12px;
 }
 
 .tag {
@@ -424,7 +425,7 @@
 
 .about-grid {
   display: grid;
-  grid-template-columns: 1fr 380px;
+  grid-template-columns: 1fr 1fr;
   gap: 64px;
   align-items: center;
 }
@@ -435,15 +436,20 @@
 
 .about-card {
   position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 400px;
 }
 
-.about-card::before {
-  content: '';
-  position: absolute;
-  inset: -1px;
-  border-radius: calc(var(--radius-lg) + 1px);
-  background: linear-gradient(135deg, rgba(118,171,174,0.15) 0%, rgba(31,45,61,0.4) 100%);
-  z-index: 0;
+.about__img {
+  position: relative;
+  z-index: 1;
+  max-width: 100%;
+  height: auto;
+  width: 100%;
+  object-fit: contain;
+  filter: drop-shadow(0 10px 40px rgba(118, 171, 174, 0.15));
 }
 
 .about-card__inner {
