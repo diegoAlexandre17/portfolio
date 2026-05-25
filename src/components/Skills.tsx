@@ -14,7 +14,9 @@ export default function Skills() {
         <div className="skills-grid">
           {SKILLS.map(skill => (
             <div key={skill.name} className="skill-card">
-              <span className="skill-card__icon">{skill.icon}</span>
+              <span className="skill-card__icon">
+                <i className={skill.icon}></i>
+              </span>
               <span className="skill-card__name">{skill.name}</span>
             </div>
           ))}
