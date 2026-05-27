@@ -5,7 +5,7 @@ import { MailIcon } from "../assets/icons/MailIcon";
 
 export default function Contact() {
   return (
-    <section className="section" id="contact">
+    <section className="section section--alt" id="contact">
       <div className="container">
         <div className="contact-inner">
           <span className="section-tag">Contacto</span>

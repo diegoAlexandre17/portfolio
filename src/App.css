@@ -782,70 +782,6 @@
   }
 }
 
-/* ─── PROCESS ────────────────────────────────────────── */
-
-.process-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 24px;
-  position: relative;
-}
-
-.process-step {
-  background: var(--surface);
-  border: 1px solid var(--border);
-  border-radius: var(--radius-lg);
-  padding: 32px 24px;
-  position: relative;
-  transition: all 0.3s ease;
-}
-
-.process-step:hover {
-  border-color: var(--border-accent);
-  box-shadow: var(--shadow-glow);
-  transform: translateY(-4px);
-}
-
-.process-step__number {
-  font-size: 48px;
-  font-weight: 800;
-  letter-spacing: -0.04em;
-  background: linear-gradient(135deg, var(--accent) 0%, transparent 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  opacity: 0.3;
-  display: block;
-  margin-bottom: 16px;
-  line-height: 1;
-}
-
-.process-step__title {
-  font-size: 17px;
-  font-weight: 700;
-  color: var(--text-bright);
-  margin-bottom: 12px;
-  letter-spacing: -0.01em;
-}
-
-.process-step__desc {
-  font-size: 14px;
-  color: var(--text);
-  line-height: 1.65;
-}
-
-@media (max-width: 900px) {
-  .process-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media (max-width: 560px) {
-  .process-grid {
-    grid-template-columns: 1fr;
-  }
-}
-
 /* ─── CONTACT ────────────────────────────────────────── */
 
 .contact-inner {
@@ -885,7 +821,7 @@
 /* ─── FOOTER ─────────────────────────────────────────── */
 
 .footer {
-  background: var(--bg-alt);
+  background: var(--bg);
   border-top: 1px solid var(--border);
   padding: 32px 0;
 }

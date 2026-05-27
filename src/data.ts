@@ -2,7 +2,6 @@ export const NAV_LINKS = [
   { href: "#about", label: "Sobre mí" },
   { href: "#skills", label: "Skills" },
   { href: "#projects", label: "Proyectos" },
-  { href: "#process", label: "Proceso" },
   { href: "#contact", label: "Contacto" },
 ];
 
@@ -42,28 +41,5 @@ export const PROJECTS = [
     title: "App Móvil Fintech",
     desc: "Aplicación de finanzas personales con integración bancaria abierta, IA para categorización automática de gastos y metas de ahorro inteligentes.",
     tags: ["React Native", "TypeScript", "Node.js", "AI"],
-  },
-];
-
-export const PROCESS_STEPS = [
-  {
-    number: "01",
-    title: "Descubrimiento",
-    desc: "Analizo tus objetivos, usuarios y requisitos técnicos para construir una visión clara y realista del proyecto.",
-  },
-  {
-    number: "02",
-    title: "Diseño & Arquitectura",
-    desc: "Wireframes, prototipos en Figma y arquitectura de código pensados para escalar y ser mantenibles a largo plazo.",
-  },
-  {
-    number: "03",
-    title: "Desarrollo",
-    desc: "Código limpio, componentes reutilizables y pruebas automatizadas entregadas en sprints iterativos.",
-  },
-  {
-    number: "04",
-    title: "Lanzamiento",
-    desc: "CI/CD, monitoreo de rendimiento y soporte post-lanzamiento para garantizar el éxito en producción.",
   },
 ];
