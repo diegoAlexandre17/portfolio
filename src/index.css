@@ -6,10 +6,10 @@
 
 :root {
   /* ── Palette ──────────────────────────────────────── */
-  --charcoal: #1a2030;   /* darkest — main background      */
-  --dark:     #1f2d3d;   /* dark blue — alt sections       */
-  --teal:     #76ABAE;   /* soft teal — accent / pop color */
-  --light:    #EEEEEE;   /* near-white — headings & text   */
+  --charcoal: #1a2030;
+  --dark:     #1f2d3d;
+  --teal:     #76ABAE;
+  --light:    #EEEEEE;
 
   /* ── Backgrounds ──────────────────────────────────── */
   --bg:     #1a2030;
@@ -34,6 +34,10 @@
   --text-bright: #EEEEEE;
   --text-dim:    #5a7e80;
 
+  /* ── Navbar ───────────────────────────────────────── */
+  --navbar-bg-scrolled: rgba(26, 32, 48, 0.92);
+  --nav-mobile-bg:      rgba(31, 45, 61, 0.98);
+
   --font: 'Inter', system-ui, sans-serif;
 
   --radius:    14px;
@@ -46,6 +50,32 @@
   --transition: 0.2s ease;
 }
 
+[data-theme="light"] {
+  --bg:     #f0f4f8;
+  --bg-alt: #e2e8f0;
+
+  --surface:       rgba(255, 255, 255, 0.65);
+  --surface-hover: rgba(255, 255, 255, 0.95);
+
+  --border:        rgba(118, 171, 174, 0.2);
+  --border-accent: rgba(118, 171, 174, 0.5);
+
+  --accent:      #4d8f92;
+  --accent-2:    #1a2030;
+  --accent-dim:  rgba(77, 143, 146, 0.12);
+  --accent-glow: rgba(77, 143, 146, 0.08);
+
+  --text:        #3a5a6a;
+  --text-bright: #1a2030;
+  --text-dim:    #7a9ea0;
+
+  --navbar-bg-scrolled: rgba(240, 244, 248, 0.92);
+  --nav-mobile-bg:      rgba(240, 244, 248, 0.98);
+
+  --shadow-glow: 0 0 40px rgba(77, 143, 146, 0.12);
+  --shadow-card: 0 4px 24px rgba(0, 0, 0, 0.08);
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -54,6 +84,7 @@ body {
   font-family: var(--font);
   background: var(--bg);
   color: var(--text);
+  transition: background-color 0.3s ease, color 0.3s ease;
   font-size: 16px;
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;

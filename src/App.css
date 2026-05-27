@@ -170,7 +170,7 @@
 }
 
 .navbar--scrolled {
-  background: rgba(26, 32, 48, 0.92);
+  background: var(--navbar-bg-scrolled);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
   border-bottom: 1px solid var(--border);
@@ -193,6 +193,7 @@
   display: flex;
   align-items: center;
   gap: 8px;
+  margin-left: auto;
 }
 
 .nav-link {
@@ -202,12 +203,60 @@
   text-decoration: none;
   padding: 6px 14px;
   border-radius: var(--radius-sm);
-  transition: all var(--transition);
+  transition: color var(--transition);
+  position: relative;
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: 2px;
+  left: 14px;
+  right: 14px;
+  height: 2px;
+  background: var(--accent);
+  border-radius: 1px;
+  transform: scaleX(0);
+  transition: transform var(--transition);
 }
 
 .nav-link:hover {
   color: var(--text-bright);
-  background: var(--surface-hover);
+}
+
+.nav-link:hover::after,
+.nav-link--active::after {
+  transform: scaleX(1);
+}
+
+.nav-link--active {
+  color: var(--text-bright);
+}
+
+.nav-end {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.theme-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: var(--radius-sm);
+  background: var(--surface);
+  border: 1px solid var(--border);
+  color: var(--text);
+  cursor: pointer;
+  transition: all var(--transition);
+}
+
+.theme-toggle:hover {
+  border-color: var(--border-accent);
+  color: var(--accent);
+  background: var(--accent-dim);
 }
 
 .hamburger {
@@ -259,7 +308,7 @@
     flex-direction: column;
     align-items: flex-start;
     padding: 80px 24px 32px;
-    background: rgba(31, 45, 61, 0.98);
+    background: var(--nav-mobile-bg);
     backdrop-filter: blur(20px);
     border-left: 1px solid var(--border);
     transition: right 0.3s ease;
