@@ -20,6 +20,11 @@ export default function Navbar({ theme, onToggleTheme }: NavbarProps) {
   }, [])
 
   useEffect(() => {
+    document.body.classList.toggle('menu-open', menuOpen)
+    return () => document.body.classList.remove('menu-open')
+  }, [menuOpen])
+
+  useEffect(() => {
     const sections = NAV_LINKS.map(l => document.querySelector(l.href)).filter(Boolean) as Element[]
     const observer = new IntersectionObserver(
       entries => {
@@ -53,6 +58,8 @@ export default function Navbar({ theme, onToggleTheme }: NavbarProps) {
           </a>
         ))}
       </nav>
+
+      <div className={`nav-overlay${menuOpen ? ' nav-overlay--visible' : ''}`} onClick={() => setMenuOpen(false)} />
 
       <div className="nav-end">
         <button
