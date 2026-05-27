@@ -20,7 +20,7 @@ export default function About() {
                 para estar al día de las últimas tendencias.
               </p>
             </section>
-            <a href="#contact" className="btn">
+            <a href="/cv/CV-DiegoRangel-2026.pdf" download className="btn">
               Descargar CV
             </a>
           </div>
