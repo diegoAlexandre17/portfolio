@@ -70,7 +70,6 @@
   --text-dim:    #7a9ea0;
 
   --navbar-bg-scrolled: rgba(240, 244, 248, 0.92);
-  --nav-mobile-bg:      rgba(240, 244, 248, 0.98);
 
   --shadow-glow: 0 0 40px rgba(77, 143, 146, 0.12);
   --shadow-card: 0 4px 24px rgba(0, 0, 0, 0.08);
@@ -78,7 +77,6 @@
 
 html {
   scroll-behavior: smooth;
-  overflow-x: hidden;
 }
 
 body {
@@ -93,9 +91,6 @@ body {
   overflow-x: hidden;
 }
 
-body.menu-open {
-  overflow: hidden;
-}
 
 #root {
   min-height: 100vh;

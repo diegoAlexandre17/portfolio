@@ -8,8 +8,6 @@ export default function Contact() {
     <section className="section" id="contact">
       <div className="container">
         <div className="contact-inner">
-          <div className="contact-glow" />
-
           <span className="section-tag">Contacto</span>
 
           <h2 className="section-title">

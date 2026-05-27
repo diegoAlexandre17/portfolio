@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react'
+import { createPortal } from 'react-dom'
 import { NAV_LINKS } from '../data'
 import { SunIcon } from '../assets/icons/SunIcon'
 import { MoonIcon } from '../assets/icons/MoonIcon'
@@ -20,8 +21,18 @@ export default function Navbar({ theme, onToggleTheme }: NavbarProps) {
   }, [])
 
   useEffect(() => {
-    document.body.classList.toggle('menu-open', menuOpen)
-    return () => document.body.classList.remove('menu-open')
+    if (menuOpen) {
+      const w = window.innerWidth - document.documentElement.clientWidth
+      document.body.style.paddingRight = `${w}px`
+      document.body.style.overflow = 'hidden'
+    } else {
+      document.body.style.paddingRight = ''
+      document.body.style.overflow = ''
+    }
+    return () => {
+      document.body.style.paddingRight = ''
+      document.body.style.overflow = ''
+    }
   }, [menuOpen])
 
   useEffect(() => {
@@ -38,47 +49,70 @@ export default function Navbar({ theme, onToggleTheme }: NavbarProps) {
     return () => observer.disconnect()
   }, [])
 
+  const close = () => setMenuOpen(false)
+
   return (
-    <header className={`navbar${scrolled ? ' navbar--scrolled' : ''}`}>
-      <a href="#" className="nav-logo">
-        <span className="nav-logo__bracket">&lt;</span>
-        DARF
-        <span className="nav-logo__bracket">/&gt;</span>
-      </a>
+    <>
+      <header className={`navbar${scrolled ? ' navbar--scrolled' : ''}`}>
+        <a href="#" className="nav-logo">
+          <span className="nav-logo__bracket">&lt;</span>
+          DARF
+          <span className="nav-logo__bracket">/&gt;</span>
+        </a>
 
-      <nav className={`nav-links${menuOpen ? ' nav-links--open' : ''}`}>
-        {NAV_LINKS.map(l => (
-          <a
-            key={l.href}
-            href={l.href}
-            className={`nav-link${activeSection === l.href ? ' nav-link--active' : ''}`}
-            onClick={() => setMenuOpen(false)}
+        <nav className="nav-links">
+          {NAV_LINKS.map(l => (
+            <a
+              key={l.href}
+              href={l.href}
+              className={`nav-link${activeSection === l.href ? ' nav-link--active' : ''}`}
+            >
+              {l.label}
+            </a>
+          ))}
+        </nav>
+
+        <div className="nav-end">
+          <button
+            className="theme-toggle"
+            onClick={onToggleTheme}
+            aria-label={theme === 'dark' ? 'Cambiar a modo claro' : 'Cambiar a modo oscuro'}
           >
-            {l.label}
-          </a>
-        ))}
-      </nav>
+            {theme === 'dark' ? <SunIcon /> : <MoonIcon />}
+          </button>
 
-      <div className={`nav-overlay${menuOpen ? ' nav-overlay--visible' : ''}`} onClick={() => setMenuOpen(false)} />
+          <button
+            className={`hamburger${menuOpen ? ' hamburger--open' : ''}`}
+            onClick={() => setMenuOpen(v => !v)}
+            aria-label={menuOpen ? 'Cerrar menú' : 'Abrir menú'}
+            aria-expanded={menuOpen}
+          >
+            <span /><span /><span />
+          </button>
+        </div>
+      </header>
 
-      <div className="nav-end">
-        <button
-          className="theme-toggle"
-          onClick={onToggleTheme}
-          aria-label={theme === 'dark' ? 'Cambiar a modo claro' : 'Cambiar a modo oscuro'}
-        >
-          {theme === 'dark' ? <SunIcon /> : <MoonIcon />}
-        </button>
-
-        <button
-          className={`hamburger${menuOpen ? ' hamburger--open' : ''}`}
-          onClick={() => setMenuOpen(v => !v)}
-          aria-label="Toggle menu"
-          aria-expanded={menuOpen}
-        >
-          <span /><span /><span />
-        </button>
-      </div>
-    </header>
+      {createPortal(
+        <>
+          <div
+            className={`mobile-overlay${menuOpen ? ' mobile-overlay--visible' : ''}`}
+            onClick={close}
+          />
+          <nav className={`mobile-panel${menuOpen ? ' mobile-panel--open' : ''}`}>
+            {NAV_LINKS.map(l => (
+              <a
+                key={l.href}
+                href={l.href}
+                className={`nav-link${activeSection === l.href ? ' nav-link--active' : ''}`}
+                onClick={close}
+              >
+                {l.label}
+              </a>
+            ))}
+          </nav>
+        </>,
+        document.body
+      )}
+    </>
   )
 }
